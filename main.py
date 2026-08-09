@@ -2,12 +2,10 @@ import requests
 import win32com.client as wincom
 speak = wincom.Dispatch("SAPI.SpVoice")
 
-text = "Python text-to-speech test. using win32com.client"
-speak.Speak(text)
-
 
 API_KEY = "b13989793f184149a91141538230103"
-CITY = "dharmshala himachal"
+CITY = input("Enter City: ")
+speak.Speak(CITY)
 
 # Correct URL for WeatherAPI.com
 URL = f"http://api.weatherapi.com/v1/current.json?key={API_KEY}&q={CITY}"
